@@ -57,7 +57,7 @@ echo -e "${GREEN}2. Sonaric ID를 저장하시겠습니까? (y/N):${NC}"
 echo -e "${YELLOW}y를 선택하고 비밀번호를 설정하세요.${NC}"
 
 # 2. Sonaric 설치 스크립트 실행
-execute_with_prompt "Sonaric 설치 스크립트를 실행합니다..." "curl -fsSL http://get.sonaric.xyz/scripts/install.sh | sh"
+execute_with_prompt "Sonaric 설치 스크립트를 실행합니다.시간이 오래걸리니 충분히 기다려주세요" "curl -fsSL http://get.sonaric.xyz/scripts/install.sh | sh"
 
 # 3. 구동 확인
 apt-get update
