@@ -44,6 +44,13 @@ echo -e "${GREEN}디스코드로 이동하여 /addnode 명령어를 입력합니
 read -p "디스코드에서 나오는 당신의 verification code를 입력하세요: " CODE
 sonaric node-register "$CODE"
 
+# 5. 앱 연동
+echo -e "${GREEN}Sonaric은 앱으로도 설치가 가능합니다. 간단하게 설명드리겠습니다.${NC}"
+echo -e "${GREEN}1.Sonaric 앱을 다운로드 받아주세요.${NC}"
+echo -e "${GREEN}2.https://docs.sonaric.xyz/installation/ 이곳에서 필요한 운영체재에 해당되는 어플을 받을 수 있습니다.${NC}"
+echo -e "${GREEN}3.통합 탭에서 디스코드를 연동해주세요.${NC}"
+echo -e "${GREEN}4.코드를 입력하라는 메시지가 표시됩니다. 위와 동일한 방식으로 디스코드에서 code를 받아주시면 됩니다.${NC}"
+
 echo -e "${YELLOW}모든 작업이 완료되었습니다. 컨트롤+A+D로 스크린을 종료해주세요.${NC}"
 echo -e "${GREEN}대시보드: https://tracker.sonaric.xyz/${NC}"
 echo -e "${GREEN}스크립트 작성자:https://t.me/kjkresearch${NC}"
