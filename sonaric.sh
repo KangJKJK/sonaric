@@ -69,6 +69,7 @@ echo -e "${GREEN}2개이상의 노드를 디스코드와 연동할 수 있습니
 echo -e "${GREEN}디스코드로 이동하여 /addnode 명령어를 입력합니다.${NC}"
 read -p "디스코드에서 나오는 당신의 verification code를 입력하세요: " CODE
 sonaric node-register "$CODE"
+echo -e "${GREEN} /node를 입력하면 현재 구동중인 모든 노드들이 표시됩니다.${NC}"
 
 # 5. 앱 연동
 echo -e "${GREEN}Sonaric은 앱으로도 설치가 가능합니다. 간단하게 설명드리겠습니다.${NC}"
