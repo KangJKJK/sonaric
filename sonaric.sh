@@ -9,6 +9,15 @@ export NC='\033[0m'  # No Color
 # 안내 메시지
 echo -e "${GREEN}Sonaric node 설치를 시작합니다.:${NC}"
 
+echo -e "${YELLOW}UFW를 활성화합니다.:${NC}"
+sudo apt-get install ufw -y
+sudo ufw enable
+sudo ufw allow 44003/tcp
+sudo ufw allow 44004/tcp
+sudo ufw allow 44005/tcp
+sudo ufw allow 44006/tcp
+sudo ufw allow 22/tcp
+
 # 사용자 안내 메시지
 echo -e "${GREEN}설치 중 다음과 같은 안내 메시지가 나옵니다:${NC}"
 
@@ -28,17 +37,6 @@ curl -fsSL http://get.sonaric.xyz/scripts/install.sh | sh
 apt-get update
 apt-get install sonaricd sonaric
 sonaric node-info
-
-#포트허용
-used_ports=$(netstat -tuln | awk '{print $4}' | grep -o '[0-9]*$' | sort -u)
-
-# 각 포트에 대해 ufw allow 실행
-for port in $used_ports; do
-    echo -e "${GREEN}포트 ${port}을(를) 허용합니다.${NC}"
-    sudo ufw allow $port/tcp
-done
-
-echo -e "${GREEN}모든 사용 중인 포트가 허용되었습니다.${NC}"
 
 # 4. 디스코드 연동
 echo -e "${GREEN}2개이상의 노드를 디스코드와 연동할 수 있습니다.${NC}"
